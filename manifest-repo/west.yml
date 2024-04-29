@@ -1,16 +1,15 @@
 manifest:
   remotes:
     - name: zephyrproject-rtos
-      url-base: https://github.com/zephyrproject-rtos
+      url-base: git@github.com:zephyrproject-rtos
   projects:
     - name: zephyr
       remote: zephyrproject-rtos
-      revision: zephyr-v3.0.0
-      clone-depth: 1
+      revision: v3.6.0
       import:
         name-allowlist:
           - hal_espressif
           - hal_nordic
           - cmsis
   self:
-    west-commands: scripts/west-commands.yml
+    path: manifest-repo
