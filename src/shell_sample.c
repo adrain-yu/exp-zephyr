@@ -10,6 +10,10 @@ static int cmd_info_board(const struct shell *sh, size_t argc, char **argv)
 	ARG_UNUSED(argv);
 
 	shell_print(sh, CONFIG_BOARD);
+	shell_info(sh, CONFIG_BOARD);
+	shell_warn(sh, CONFIG_BOARD);
+	shell_error(sh, CONFIG_BOARD);
+
 
 	return 0;
 }
