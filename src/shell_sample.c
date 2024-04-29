@@ -1,6 +1,5 @@
 #include <stdlib.h>
 #include <zephyr/kernel.h>
-#include <zephyr/zephyr.h>
 #include <version.h>
 #include <zephyr/shell/shell.h>
 
