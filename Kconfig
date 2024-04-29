@@ -1,0 +1,11 @@
+mainmenu "Zephyr Kernel Configuration"
+# 添加应用配置菜单，名为"Application Configuration"
+menu "Application Configuration"
+    # 增加一个配置项，配置是否启用logging的示例代码
+    # 默认选中该配置项，选择该配置项时也将选择Zephyr本身的CONFIG_LOG
+    config LOGGING_SAMPLE
+        bool "Enable logging sample code"
+        select LOG
+        default y
+endmenu
+source "Kconfig.zephyr"

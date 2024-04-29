@@ -9,3 +9,7 @@ project(zpro)
 
 # 将应用的代码加入构建，必须在find_package后
 target_sources(app PRIVATE src/main.c)
+
+target_sources_ifdef(CONFIG_LOGGING_SAMPLE app PRIVATE  src/log_sample/simple.c
+							src/log_sample/simple_co.c
+)

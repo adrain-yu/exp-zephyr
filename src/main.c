@@ -28,10 +28,13 @@ static void log_thread_fun(void *p1, void *p2, void *p3)
 	k_sleep(K_MSEC(1000000000));
     }
 }
-
+extern void simple_logging(void);
+extern void simple_co_logging(void);
 void main(void)
 {
+    simple_logging();
     k_thread_create(&main_thread, stack, STACKSIZE, log_thread_fun, NULL, NULL,
 			NULL, K_PRIO_COOP(7), 0, K_NO_WAIT);
 
+    simple_co_logging();
 }

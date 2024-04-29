@@ -53,3 +53,10 @@ dkms.conf
 
 # Build file
 build/
+
+zephyr
+
+.venv
+.west
+.vscode
+modules
