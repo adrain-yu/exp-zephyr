@@ -12,4 +12,5 @@ target_sources(app PRIVATE src/main.c)
 
 target_sources_ifdef(CONFIG_LOGGING_SAMPLE app PRIVATE  src/log_sample/simple.c
 							src/log_sample/simple_co.c
+							src/shell_sample.c
 )
